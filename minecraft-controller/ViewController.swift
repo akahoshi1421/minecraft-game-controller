@@ -93,6 +93,28 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+    // 受信処理
+    func receiveMessage() {
+      webSocketTask.receive { [weak self] result in
+        switch result {
+          case .success(let message):
+            switch message {
+              case .string(let text):
+                print("Received! text: \(text)")
+              case .data(let data):
+                print("Received! binary: \(data)")
+              @unknown default:
+                fatalError()
+            }
+            self?.receiveMessage()  // <- 継続して受信するために再帰的に呼び出す
+          case .failure(let error):
+            print("Failed! error: \(error)")
+        }
+      }
+    }
+
 
 
 }
