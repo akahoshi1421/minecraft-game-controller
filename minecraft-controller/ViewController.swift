@@ -21,12 +21,22 @@ class ViewController: UIViewController {
     
     var myMotionManager = CMMotionManager()
     
+    @IBOutlet weak var agent: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let urlSession = URLSession(configuration: .default)
         let url = URL.init(string: "ws://localhost:9999")!
+        
+        
+        let screenHight = UIScreen.main.bounds.size.width
+        let split = (screenHight / 3) / 2
+        
+        let leftPosition = split
+        let centerPosition = split * 3
+        let rightPosition = split * 5
         
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.resume()
@@ -39,19 +49,26 @@ class ViewController: UIViewController {
             self.roll = round(motion.attitude.pitch * 180 / Double.pi)
             
             // どこにエージェントを置くかを指定
-            if(self.roll < 75.0){
-                self.direction = "right"
-            } else if(self.roll < 105.0){
-                self.direction = "center"
-            } else{
+            if(self.roll > 10.0){
                 self.direction = "left"
+                self.agent.center.x = leftPosition
+                
+            } else if(self.roll > -10.0){
+                self.direction = "center"
+                self.agent.center.x = centerPosition
+                
+            } else{
+                self.direction = "right"
+                self.agent.center.x = rightPosition
+                
             }
             
             
             if(self.direction != self.directionForward){
+                print(self.direction)
                 //サーバに送るメッセージを作成
                 let msg = URLSessionWebSocketTask.Message.string("{\"direction\": \"\(self.direction)\"}")
-                
+
                 //送信
                 self.webSocketTask.send(msg){error in
                     if let error = error {
@@ -64,12 +81,12 @@ class ViewController: UIViewController {
             self.rollForward = round(motion.attitude.pitch * 180 / Double.pi)
             
             // どこにエージェントを置くかを指定
-            if(self.rollForward < 75.0){
-                self.direction = "right"
-            } else if(self.rollForward < 105.0){
+            if(self.rollForward > 10.0){
+                self.direction = "left"
+            } else if(self.rollForward > -10.0){
                 self.direction = "center"
             } else{
-                self.direction = "left"
+                self.direction = "right"
             }
             
         })

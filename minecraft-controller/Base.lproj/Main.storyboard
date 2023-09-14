@@ -25,6 +25,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Yh-CX-fhZ"/>
+                    <connections>
+                        <outlet property="agent" destination="p4p-35-mbr" id="XgY-GZ-GOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E70-BU-xIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
