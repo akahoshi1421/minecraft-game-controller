@@ -16,6 +16,7 @@
 		72A6B6F52AB316100073E6E3 /* minecraft_controllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B6F42AB316100073E6E3 /* minecraft_controllerTests.swift */; };
 		72A6B6FF2AB316100073E6E3 /* minecraft_controllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B6FE2AB316100073E6E3 /* minecraft_controllerUITests.swift */; };
 		72A6B7012AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B7002AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift */; };
+		72A6B7112AB3184B0073E6E3 /* Agent (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 72A6B7102AB3184B0073E6E3 /* Agent (1).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		72A6B6FA2AB316100073E6E3 /* minecraft-controllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "minecraft-controllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A6B6FE2AB316100073E6E3 /* minecraft_controllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minecraft_controllerUITests.swift; sourceTree = "<group>"; };
 		72A6B7002AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minecraft_controllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72A6B7102AB3184B0073E6E3 /* Agent (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Agent (1).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				72A6B6DD2AB3160E0073E6E3 /* AppDelegate.swift */,
 				72A6B6DF2AB3160E0073E6E3 /* SceneDelegate.swift */,
 				72A6B6E12AB3160E0073E6E3 /* ViewController.swift */,
+				72A6B7102AB3184B0073E6E3 /* Agent (1).png */,
 				72A6B6E32AB3160E0073E6E3 /* Main.storyboard */,
 				72A6B6E62AB316100073E6E3 /* Assets.xcassets */,
 				72A6B6E82AB316100073E6E3 /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A6B6EA2AB316100073E6E3 /* LaunchScreen.storyboard in Resources */,
+				72A6B7112AB3184B0073E6E3 /* Agent (1).png in Resources */,
 				72A6B6E72AB316100073E6E3 /* Assets.xcassets in Resources */,
 				72A6B6E52AB3160E0073E6E3 /* Main.storyboard in Resources */,
 			);
