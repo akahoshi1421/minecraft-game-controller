@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     var myMotionManager = CMMotionManager()
     
+    var timeJsonData: Data!
+    
     @IBOutlet weak var agent: UIImageView!
     
     override func viewDidLoad() {
@@ -37,6 +39,9 @@ class ViewController: UIViewController {
         let leftPosition = split
         let centerPosition = split * 3
         let rightPosition = split * 5
+        
+        let parsedJsonData: String = "{\"time\":1}"
+        timeJsonData = parsedJsonData.data(using: String.Encoding.utf8)!
         
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.resume()
@@ -103,6 +108,26 @@ class ViewController: UIViewController {
             switch message {
               case .string(let text):
                 print("Received! text: \(text)")
+                
+                // ゲームオーバー処理
+                if(text.contains("time")){
+                    do{
+                        let items = try JSONSerialization.jsonObject(with: self!.timeJsonData) as! Dictionary<String, Int>
+                        let scoreTime: Int = items["time"]!
+                        
+                        UserDefaults.standard.set(scoreTime, forKey: "scoreTime")
+                        self?.webSocketTask.cancel()
+                        
+                        
+                        self?.performSegue(withIdentifier: "showResult", sender: nil)
+                    }
+                    catch{
+                        print(error)
+                    }
+                    
+                }
+                
+                
               case .data(let data):
                 print("Received! binary: \(data)")
               @unknown default:

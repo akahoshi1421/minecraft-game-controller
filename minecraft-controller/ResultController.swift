@@ -13,6 +13,9 @@ class ResultController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let scoreTime = UserDefaults.standard.integer(forKey: "scoreTime")
+        
+        result.text = String(scoreTime)
 
         // Do any additional setup after loading the view.
     }
