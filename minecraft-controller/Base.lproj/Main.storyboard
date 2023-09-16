@@ -30,6 +30,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-i8-iWk">
+                                <rect key="frame" x="364" y="303" width="185" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="トップへ"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lpb-9c-5lL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kqN-IB-Qsg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,7 +97,7 @@
                                 <rect key="frame" x="407" y="237" width="129" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="接続"/>
+                                <buttonConfiguration key="configuration" style="filled" title="スタート"/>
                                 <connections>
                                     <segue destination="sQV-FP-5SG" kind="show" id="lfX-zv-L4x"/>
                                 </connections>
@@ -97,6 +106,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="85u-M1-iMt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
