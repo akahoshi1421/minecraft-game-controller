@@ -15,7 +15,7 @@ class ResultController: UIViewController {
         super.viewDidLoad()
         let scoreTime = UserDefaults.standard.integer(forKey: "scoreTime")
         
-        result.text = String(scoreTime)
+        result.text = String(scoreTime) + "秒"
 
         // Do any additional setup after loading the view.
     }
