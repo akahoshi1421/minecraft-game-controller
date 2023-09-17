@@ -40,9 +40,6 @@ class ViewController: UIViewController {
         let centerPosition = split * 3
         let rightPosition = split * 5
         
-        let parsedJsonData: String = "{\"time\":1}"
-        timeJsonData = parsedJsonData.data(using: String.Encoding.utf8)!
-        
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.resume()
         
@@ -112,6 +109,7 @@ class ViewController: UIViewController {
                 // ゲームオーバー処理
                 if(text.contains("time")){
                     do{
+                        self!.timeJsonData = text.data(using: String.Encoding.utf8)!
                         let items = try JSONSerialization.jsonObject(with: self!.timeJsonData) as! Dictionary<String, Int>
                         let scoreTime: Int = items["time"]!
                         
