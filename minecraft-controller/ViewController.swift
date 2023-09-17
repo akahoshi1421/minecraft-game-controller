@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let urlSession = URLSession(configuration: .default)
-        let url = URL.init(string: "ws://localhost:9999")!
+        let url = URL.init(string: "ws://172.25.182.67:9999")!
         
         
         let screenHight = UIScreen.main.bounds.size.width
@@ -87,16 +87,16 @@ class ViewController: UIViewController {
             
             // どこにエージェントを置くかを指定
             if(self.rollForward > 10.0){
-                self.direction = "left"
+                self.directionForward = "left"
             } else if(self.rollForward > -10.0){
-                self.direction = "center"
+                self.directionForward = "center"
             } else{
-                self.direction = "right"
+                self.directionForward = "right"
             }
             
         })
         
-        
+        receiveMessage()
     }
     
     
@@ -118,8 +118,10 @@ class ViewController: UIViewController {
                         UserDefaults.standard.set(scoreTime, forKey: "scoreTime")
                         self?.webSocketTask.cancel()
                         
+                        DispatchQueue.main.async {
+                            self?.performSegue(withIdentifier: "showResult", sender: nil)
+                        }
                         
-                        self?.performSegue(withIdentifier: "showResult", sender: nil)
                     }
                     catch{
                         print(error)
