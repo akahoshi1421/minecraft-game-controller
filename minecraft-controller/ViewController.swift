@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let urlSession = URLSession(configuration: .default)
-        let url = URL.init(string: "ws://172.25.182.67:9999")!
+        let url = URL.init(string: "ws://172.25.179.128:9999")!
         
         
         let screenHight = UIScreen.main.bounds.size.width
