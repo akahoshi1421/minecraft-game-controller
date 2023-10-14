@@ -18,7 +18,6 @@
 		72A6B7012AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B7002AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift */; };
 		72A6B7112AB3184B0073E6E3 /* Agent (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 72A6B7102AB3184B0073E6E3 /* Agent (1).png */; };
 		72A6B7132AB3267E0073E6E3 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B7122AB3267E0073E6E3 /* ResultController.swift */; };
-		72C3D29E2ADA86B900C52C69 /* dart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72C3D29D2ADA86B800C52C69 /* dart.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		72A6B7002AB316100073E6E3 /* minecraft_controllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minecraft_controllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		72A6B7102AB3184B0073E6E3 /* Agent (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Agent (1).png"; sourceTree = "<group>"; };
 		72A6B7122AB3267E0073E6E3 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
-		72C3D29D2ADA86B800C52C69 /* dart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dart.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				72A6B6DF2AB3160E0073E6E3 /* SceneDelegate.swift */,
 				72A6B6E12AB3160E0073E6E3 /* ViewController.swift */,
 				72A6B7102AB3184B0073E6E3 /* Agent (1).png */,
-				72C3D29D2ADA86B800C52C69 /* dart.jpg */,
 				72A6B6E32AB3160E0073E6E3 /* Main.storyboard */,
 				72A6B7122AB3267E0073E6E3 /* ResultController.swift */,
 				72A6B6E62AB316100073E6E3 /* Assets.xcassets */,
@@ -241,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A6B6EA2AB316100073E6E3 /* LaunchScreen.storyboard in Resources */,
-				72C3D29E2ADA86B900C52C69 /* dart.jpg in Resources */,
 				72A6B7112AB3184B0073E6E3 /* Agent (1).png in Resources */,
 				72A6B6E72AB316100073E6E3 /* Assets.xcassets in Resources */,
 				72A6B6E52AB3160E0073E6E3 /* Main.storyboard in Resources */,
