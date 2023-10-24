@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		726C31DC2AE7A7E500CD8FE8 /* dart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 726C31DB2AE7A7E500CD8FE8 /* dart.jpg */; };
 		72A6B6DE2AB3160E0073E6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B6DD2AB3160E0073E6E3 /* AppDelegate.swift */; };
 		72A6B6E02AB3160E0073E6E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B6DF2AB3160E0073E6E3 /* SceneDelegate.swift */; };
 		72A6B6E22AB3160E0073E6E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6B6E12AB3160E0073E6E3 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		726C31DB2AE7A7E500CD8FE8 /* dart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dart.jpg; sourceTree = "<group>"; };
 		72A6B6DA2AB3160E0073E6E3 /* minecraft-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "minecraft-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A6B6DD2AB3160E0073E6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A6B6DF2AB3160E0073E6E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		72A6B6DC2AB3160E0073E6E3 /* minecraft-controller */ = {
 			isa = PBXGroup;
 			children = (
+				726C31DB2AE7A7E500CD8FE8 /* dart.jpg */,
 				72A6B6DD2AB3160E0073E6E3 /* AppDelegate.swift */,
 				72A6B6DF2AB3160E0073E6E3 /* SceneDelegate.swift */,
 				72A6B6E12AB3160E0073E6E3 /* ViewController.swift */,
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A6B6EA2AB316100073E6E3 /* LaunchScreen.storyboard in Resources */,
+				726C31DC2AE7A7E500CD8FE8 /* dart.jpg in Resources */,
 				72A6B7112AB3184B0073E6E3 /* Agent (1).png in Resources */,
 				72A6B6E72AB316100073E6E3 /* Assets.xcassets in Resources */,
 				72A6B6E52AB3160E0073E6E3 /* Main.storyboard in Resources */,

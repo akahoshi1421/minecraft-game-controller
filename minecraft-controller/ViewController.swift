@@ -43,6 +43,14 @@ class ViewController: UIViewController {
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.resume()
         
+        let startMsg = URLSessionWebSocketTask.Message.string("{\"gameStart\": true}")
+        self.webSocketTask.send(startMsg){error in
+            if let error = error {
+                print(error)
+            }
+        }
+        
+        
         myMotionManager.deviceMotionUpdateInterval = 0.3
         myMotionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion, error) in
             guard let motion = motion, error == nil else { return }
