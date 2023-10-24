@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.resume()
         
-        let startMsg = URLSessionWebSocketTask.Message.string("gameStart")
+        let startMsg = URLSessionWebSocketTask.Message.string("{\"gameStart\": true}")
         self.webSocketTask.send(startMsg){error in
             if let error = error {
                 print(error)
